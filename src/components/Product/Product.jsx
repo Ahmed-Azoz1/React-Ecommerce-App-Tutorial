@@ -1,7 +1,9 @@
 import React , {useState,useEffect} from 'react'
 import { useParams } from 'react-router'
 import { NavLink } from 'react-router-dom';
-import Selection from 'react-loading-skeleton'
+import Skeleton from 'react-loading-skeleton';
+import {useSelector,useDispatch} from 'react-redux'
+
 
 
 const Product = () => {
@@ -23,15 +25,15 @@ const Product = () => {
         return(
             <>
                 <div className="col-md-6">
-                    <Selection height={400}/>
+                    <Skeleton height={400}/>
                 </div>
                 <div className="col-md-6" style={{lineHeight:2}}>
-                    <Selection height={50} width={300}/>
-                    <Selection height={75} />
-                    <Selection height={25} width={150} />
-                    <Selection height={50} />
-                    <Selection height={150} />
-                    <Selection height={50} width={100}/>
+                    <Skeleton height={50} width={300}/>
+                    <Skeleton height={75} />
+                    <Skeleton height={25} width={150} />
+                    <Skeleton height={50} />
+                    <Skeleton height={150} />
+                    <Skeleton height={50} width={100}/>
                 </div>
             </>
         )
